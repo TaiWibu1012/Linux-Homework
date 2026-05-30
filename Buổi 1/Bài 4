@@ -1,0 +1,5 @@
+Step 1: Biến được khởi tạo ở shell hiện tại thì shell đó hoàn toàn đọc được.
+Step 2: Lệnh bash đã mở một Shell con mới. Biến thông thường ở Step 1 chỉ là biến cục bộ, nó không tự động truyền xuống Shell con. Lệnh exit là để thoát Shell con về lại Shell cha.
+Step 3: Từ khóa export đã biến MY_NAME thành Biến môi trường. Quy tắc của Linux là các biến môi trường của Shell cha sẽ được sao chép và truyền xuống cho Shell con.
+Step 4: Ở child shell ta đổi giá trị biến thành "Alice" thì child shell nhận giá trị mới này.
+        Khi exit về parent shell: Giá trị vẫn là "Quan" vì Shell con chỉ thay đổi trên "bản sao" của nó, nó không thể tác động ngược hay thay đổi giá trị biến của Shell cha.
